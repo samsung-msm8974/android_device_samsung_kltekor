@@ -37,35 +37,27 @@
 
 #include "init_msm8974.h"
 
-#define ISMATCH(a, b) (!strncmp((a), (b), PROP_VALUE_MAX))
-
 void init_target_properties()
 {
-    char platform[PROP_VALUE_MAX];
-    char bootloader[PROP_VALUE_MAX];
-    char device[PROP_VALUE_MAX];
-    char devicename[PROP_VALUE_MAX];
-    int rc;
-
-    rc = property_get("ro.board.platform", platform);
-    if (!rc || !ISMATCH(platform, ANDROID_TARGET))
+    std::string platform = property_get("ro.board.platform");
+    if (platform != ANDROID_TARGET)
         return;
 
-    property_get("ro.bootloader", bootloader);
+    std::string bootloader = property_get("ro.bootloader");
 
-    if (strstr(bootloader, "G900K")) {
+    if (bootloader.find("G900K") == 0) {
         /* kltektt - KT Corp (formerly Korea Telecom) */
         property_set("ro.build.fingerprint", "samsung/kltektt/kltektt:6.0.1/MMB29M/G900KKTU1CPI1:user/release-keys");
         property_set("ro.build.description", "kltektt-user 6.0.1 MMB29M G900KKTU1CPI1 release-keys");
         property_set("ro.product.model", "SM-G900K");
         property_set("ro.product.device", "kltektt");
-    } else if (strstr(bootloader, "G900L")) {
+    } else if (bootloader.find("G900L") == 0) {
         /* kltelgt - LG Uplus */
         property_set("ro.build.fingerprint", "samsung/kltelgt/kltelgt:6.0.1/MMB29M/G900LKLU1CPI1:user/release-keys");
         property_set("ro.build.description", "kltelgt-user 6.0.1 MMB29M G900LKLU1CPI1 release-keys");
         property_set("ro.product.model", "SM-G900L");
         property_set("ro.product.device", "kltelgt");
-    } else if (strstr(bootloader, "G900S")) {
+    } else if (bootloader.find("G900S") == 0) {
         /* klteskt - SK Telecom */
         property_set("ro.build.fingerprint", "samsung/klteskt/klteskt:6.0.1/MMB29M/G900SKSU1CPI1:user/release-keys");
         property_set("ro.build.description", "klteskt-user 6.0.1 MMB29M G900SKSU1CPI1 release-keys");
@@ -73,7 +65,6 @@ void init_target_properties()
         property_set("ro.product.device", "klteskt");
     }
 
-    property_get("ro.product.device", device);
-    strlcpy(devicename, device, sizeof(devicename));
-    INFO("Found bootloader id %s setting build properties for %s device\n", bootloader, devicename);
+    std::string device = property_get("ro.product.device");
+    INFO("Found bootloader id %s setting build properties for %s device\n", bootloader.c_str(), device.c_str());
 }
