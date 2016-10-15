@@ -1,5 +1,5 @@
 # Bluetooth firmware
-vendor/firmware/bcm4350_V0301.0561.hcd
+vendor/firmware/bcm4350_V0301.0573.hcd
 
 # GPS
 etc/clatd.conf
