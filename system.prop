@@ -5,4 +5,3 @@ ro.ril.telephony.mqanelements=6
 # GSM Properties
 telephony.lteOnGsmDevice=1
 ro.telephony.default_network=9
-ro.telephony.ril.config=newDialCode
