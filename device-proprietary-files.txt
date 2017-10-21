@@ -1,3 +1,2 @@
 # Radio - pinned to G900FXXS1BPCL_G900FOXA1BOJ1_BTU
-lib/libril.so|aebfbe2448d032c1fb14d3bef41e771d9537c6a2
 lib/libsec-ril.so|075570a628f465f92f3067afcefb6938d4e5dc3a
