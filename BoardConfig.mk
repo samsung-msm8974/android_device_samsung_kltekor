@@ -14,12 +14,15 @@
 # limitations under the License.
 
 # inherit from common klte
--include device/samsung/klte-common/BoardConfigCommon.mk
+include device/samsung/klte-common/BoardConfigCommon.mk
 
 TARGET_OTA_ASSERT_DEVICE := klte,kltekor,kltektt,kltelgt,klteskt
 
 # Kernel
 TARGET_KERNEL_CONFIG := lineage_kltekor_defconfig
+
+# Fingerprint
+include $(COMMON_PATH)/fingerprint/board.mk
 
 # Init
 TARGET_INIT_VENDOR_LIB := libinit_msm8974
