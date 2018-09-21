@@ -54,20 +54,20 @@ void init_target_properties()
         /* kltektt - KT Corp (formerly Korea Telecom) */
         property_override_dual("ro.build.fingerprint", "ro.vendor.build.fingerprint", "samsung/kltektt/kltektt:6.0.1/MMB29M/G900KKTU1CPL5:user/release-keys");
         property_override("ro.build.description", "kltektt-user 6.0.1 MMB29M G900KKTU1CPL5 release-keys");
-        property_override_dual("ro.product.model", "ro.vendor.product.model", "SM-G900K");
-        property_override_dual("ro.product.device", "ro.vendor.product.device", "kltektt");
+        property_override_dual("ro.product.model", "ro.product.vendor.model", "SM-G900K");
+        property_override_dual("ro.product.device", "ro.product.vendor.device", "kltektt");
     } else if (bootloader.find("G900L") == 0) {
         /* kltelgt - LG Uplus */
         property_override_dual("ro.build.fingerprint", "ro.vendor.build.fingerprint", "samsung/kltelgt/kltelgt:6.0.1/MMB29M/G900LKLU1CPL5:user/release-keys");
         property_override("ro.build.description", "kltelgt-user 6.0.1 MMB29M G900LKLU1CPL5 release-keys");
-        property_override_dual("ro.product.model", "ro.vendor.product.model", "SM-G900L");
-        property_override_dual("ro.product.device", "ro.vendor.product.device", "kltelgt");
+        property_override_dual("ro.product.model", "ro.product.vendor.model", "SM-G900L");
+        property_override_dual("ro.product.device", "ro.product.vendor.device", "kltelgt");
     } else if (bootloader.find("G900S") == 0) {
         /* klteskt - SK Telecom */
         property_override_dual("ro.build.fingerprint", "ro.vendor.build.fingerprint", "samsung/klteskt/klteskt:6.0.1/MMB29M/G900SKSU1CPL5:user/release-keys");
         property_override("ro.build.description", "klteskt-user 6.0.1 MMB29M G900SKSU1CPL5 release-keys");
-        property_override_dual("ro.product.model", "ro.vendor.product.model", "SM-G900S");
-        property_override_dual("ro.product.device", "ro.vendor.product.device", "klteskt");
+        property_override_dual("ro.product.model", "ro.product.vendor.model", "SM-G900S");
+        property_override_dual("ro.product.device", "ro.product.vendor.device", "klteskt");
     }
 
     std::string device = GetProperty("ro.product.device", "");
