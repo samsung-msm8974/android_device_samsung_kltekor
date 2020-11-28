@@ -1,2 +1,2 @@
 # Radio - Pinned to haxxed G900FXXU1CSA1_G900FVIA1CSC1_VIA
-lib/libsec-ril.so:vendor/lib/libsec-ril.so|85386e9a721ce8aa27a03a791a1600c753d29859
+lib/libsec-ril.so:vendor/lib/libsec-ril.so|e60f1058bc75e2b82d9bf4e32a75d3025583b37d
