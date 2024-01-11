@@ -43,21 +43,21 @@ void vendor_load_properties()
         /* kltektt - KT Corp (formerly Korea Telecom) */
         property_override("ro.build.description", "kltektt-user 6.0.1 MMB29M G900KKTU1CPL5 release-keys");
         set_ro_product_prop("device", "kltektt");
-        set_ro_product_prop("fingerprint", "samsung/kltektt/kltektt:6.0.1/MMB29M/G900KKTU1CPL5:user/release-keys");
+        set_ro_product_prop("build.fingerprint", "samsung/kltektt/kltektt:6.0.1/MMB29M/G900KKTU1CPL5:user/release-keys");
         set_ro_product_prop("model", "SM-G900K");
         set_ro_product_prop("name", "kltektt");
     } else if (bootloader.find("G900L") == 0) {
         /* kltelgt - LG Uplus */
         property_override("ro.build.description", "kltelgt-user 6.0.1 MMB29M G900LKLU1CPL5 release-keys");
         set_ro_product_prop("device", "kltelgt");
-        set_ro_product_prop("fingerprint", "samsung/kltelgt/kltelgt:6.0.1/MMB29M/G900LKLU1CPL5:user/release-keys");
+        set_ro_product_prop("build.fingerprint", "samsung/kltelgt/kltelgt:6.0.1/MMB29M/G900LKLU1CPL5:user/release-keys");
         set_ro_product_prop("model", "SM-G900L");
         set_ro_product_prop("name", "kltelgt");
     } else if (bootloader.find("G900S") == 0) {
         /* klteskt - SK Telecom */
         property_override("ro.build.description", "klteskt-user 6.0.1 MMB29M G900SKSU1CPL5 release-keys");
         set_ro_product_prop("device", "klteskt");
-        set_ro_product_prop("fingerprint", "samsung/klteskt/klteskt:6.0.1/MMB29M/G900SKSU1CPL5:user/release-keys");
+        set_ro_product_prop("build.fingerprint", "samsung/klteskt/klteskt:6.0.1/MMB29M/G900SKSU1CPL5:user/release-keys");
         set_ro_product_prop("model", "SM-G900S");
         set_ro_product_prop("name", "klteskt");
     }

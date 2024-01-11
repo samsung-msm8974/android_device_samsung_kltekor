@@ -9,7 +9,7 @@
 set -e
 
 export DEVICE=kltekor
-export DEVICE_COMMON=klte-common
+export DEVICE_COMMON=msm8974-common
 export VENDOR=samsung
 
 function blob_fixup() {
