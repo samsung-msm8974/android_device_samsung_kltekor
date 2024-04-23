@@ -43,6 +43,10 @@ TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
 # Recovery
 BOARD_CUSTOM_RECOVERY_KEYMAPPING := ../../$(COMMON_PATH)/recovery/recovery_keys.c
 
+# Legacy BLOB Support
+TARGET_LD_SHIM_LIBS += \
+    /system/vendor/lib/libril-qc-qmi-1.so|libril_shim.so
+
 # Include
 TARGET_SPECIFIC_HEADER_PATH := $(COMMON_PATH)/klte-include
 
